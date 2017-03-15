@@ -5,7 +5,12 @@ function Project (name, description,url){
   this.description = description;
   this.url = url;
 
-};
+}
 
-var salmonCookies = new Project('Salmon Cookies', 'Week two assignment of Code 201', 'www.salmon.cookies');
-console.log(salmonCookies);
+Project.prototype.toHtml = function() {
+var $newProject = $('currentProjects').clone();
+
+  $newProject.find('h2').text(this.name);
+  $newProject.find('a').attr('href', this.url);
+
+}

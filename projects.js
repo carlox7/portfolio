@@ -3,17 +3,17 @@
 var carloProjects = [
   {
     name: 'About Me',
-    description: 'something',
+    description: '<p>something</p>',
     url:   'http://www',
 },
   {
     name: 'Salmon Cookies',
-    description: 'something',
+    description: '<p>something</p>',
     url:   'http://www',
 },
   {
     name: 'Busmall',
-    description: 'something',
+    description: '<p>something</p>',
     url:   'http://www',
   }
 ];
