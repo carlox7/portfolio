@@ -17,3 +17,7 @@ var carloProjects = [
     url:   'http://www',
   }
 ];
+
+$( ".icon-menu" ).click(function() {
+  $(this).show();
+});

@@ -13,6 +13,7 @@ Project.prototype.toHtml = function() {
 var $newProject = $('currentProjects').clone();
 
   $newProject.find('h2').text(this.name);
+  $newArticle.find('.description').html(this.body);
   $newProject.find('a').attr('href', this.url);
 
 };
