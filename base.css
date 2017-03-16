@@ -42,7 +42,12 @@ footer{
 }
 
 li{
+  color: black;
   display: inline-block;
-  font-size: 20px;
+  font-size: 30px;
   font-family: Helvetica;
+}
+
+a {
+  color: black;
 }
