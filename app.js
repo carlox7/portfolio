@@ -1,6 +1,6 @@
 'use strict';
 
-var myProjects = [];
+var myProjects = {};
 
 function Project (name, description,url){
   this.name = name;
