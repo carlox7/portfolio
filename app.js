@@ -26,4 +26,3 @@ carloProjects.forEach(function(projectItem) {
 myProjects.forEach(function(a){
   $('#work').append(a.toHtml());
 });
-console.log(myProjects);
