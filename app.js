@@ -10,7 +10,7 @@ function Project (proj){
 }
 
 Project.prototype.toHtml = function() {
-var $newProject = $('section.currentProjects').clone().removeClass('currentProjects');
+var $newProject = $('section.currentProjects').clone().removeClass('currentProjects').removeAttr('id');
 
   $newProject.find('h2').text(this.name);
   $newProject.find('.description').html(this.description);
@@ -24,6 +24,5 @@ carloProjects.forEach(function(projectItem) {
 });
 
 myProjects.forEach(function(a){
-  $('#work').append(a.toHtml());
+  $('#projects').append(a.toHtml());
 });
-console.log(myProjects);
