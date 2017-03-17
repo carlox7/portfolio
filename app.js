@@ -10,10 +10,10 @@ function Project (proj){
 }
 
 Project.prototype.toHtml = function() {
-var $newProject = $('#work').clone();
+var $newProject = $('section.currentProjects').clone().removeClass('currentProjects');
 
   $newProject.find('h2').text(this.name);
-  $newProject.find('.description').html(this.body);
+  $newProject.find('.description').html(this.description);
   $newProject.find('a').text(this.name);
   $newProject.find('a').attr('href', this.url);
   return $newProject;
