@@ -48,9 +48,23 @@ li{
 }
 
 a {
-  color: black;
+  color: white;
+  text-decoration: none;
 }
 
 img {
   width: 80%;
+}
+
+section{
+  margin: 0 auto;
+  text-align: center;
+}
+
+p {
+  width: 80%;
+  margin: 0 auto;
+  font-size: 25px;
+  font-family: Helvetica;
+  color: #d9d9d9;
 }

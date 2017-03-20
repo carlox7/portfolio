@@ -10,14 +10,9 @@ function Project (proj){
 }
 
 Project.prototype.toHtml = function() {
-var $newProject = $('section.currentProjects').clone().removeClass('currentProjects').removeAttr('id');
-
-  $newProject.find('h2').text(this.name);
-  $newProject.find('img').attr('src', this.projectImage);
-  $newProject.find('.description').html(this.description);
-  $newProject.find('a').text(this.name);
-  $newProject.find('a').attr('href', this.url);
-  return $newProject;
+  var source = $('#project-template').html();
+    var templateRender = Handlebars.compile(source);
+    return templateRender(this);
 };
 
 carloProjects.forEach(function(projectItem) {

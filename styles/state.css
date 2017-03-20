@@ -1,18 +1,31 @@
-@media only screen and (min-width: 640px) {
+@media only screen and (min-width: 740px) {
   .icon-menu{
     display: none;
   }
+  nav {
+    margin: 0 auto;
+    text-align: center;
+    color: #b7a57a;
 
+  }
 }
 
-@media screen and (max-width: 700px){
-  .main-nav ul{
-    display: none;
-    list-style: none;
-    clear: both;
+.icon-menu {
+  color: #B7A57A;
 }
-.main-nav:hover ul {
+
+.main-menu ul{
+  display: none;
+  list-style: none;
+  clear: both;
+}
+
+.main-menu:hover ul {
+  margin-right: 3em;
+  text-align: right;
   display: block;
-
 }
+
+.main-menu ul li {
+  width: 100%;
 }
