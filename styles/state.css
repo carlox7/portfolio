@@ -2,7 +2,12 @@
   .icon-menu{
     display: none;
   }
-
+  .main-nav {
+    margin: 0 auto;
+    text-align: center;
+    color: #b7a57a;
+    
+  }
 }
 
 @media screen and (max-width: 700px){

@@ -7,3 +7,11 @@
   color: #85754d;
   font-size: 50px;
 }
+
+.link-button {
+  font-size: 30px;
+  background-color: #85754d;
+  width: 20%;
+  margin: 0 auto;
+  color: black;
+}
