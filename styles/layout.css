@@ -9,7 +9,8 @@
 }
 
 .link-button {
-  font-size: 30px;
+  font-size: 1em;
+  text-align: center;
   background-color: #85754d;
   width: 20%;
   margin: 0 auto;
