@@ -10,14 +10,18 @@
   }
 }
 
-@media screen and (max-width: 700px){
-  .main-menu ul{
-    display: none;
-    list-style: none;
-    clear: both;
+.main-menu ul{
+  display: none;
+  list-style: none;
+  clear: both;
 }
-.main-nav:hover ul {
-  display: block;
 
+.main-menu:hover ul {
+  margin-right: 3em;
+  text-align: right;
+  display: block;
 }
+
+.main-menu ul li {
+  width: 100%;
 }
