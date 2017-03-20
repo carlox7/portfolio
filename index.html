@@ -12,21 +12,16 @@
 
     <script id="project-template" type="text/x-handlebars-template">
 
-    <article data-category="{{category}}" data-author="{{author}}">
-      <header>
-      <h1>{{title}}</h1>
-      <div class="byline">
-        By <address><a href="{{authorUrl}}">{{author}}</a></address>
-        published <time pubdate datetime="{{publishedOn}}">{{daysAgo}} days ago</time>
+      <div class="projectsTemp">
+        <h1>{{name}}</h1>
+        <section id="work" class="currentProjects">
+        <img src="{{projectImage}}" class="Project-Picture">
+        <address><a href="{{url}}">{{name}}</a></address>
+        <article class="description">{{{description}}}</article>
+        </section>
+        <hr>
       </div>
-      <section class="article-body">
-        {{{body}}}
-      </section>
-      <a href="#" class="read-on">Read on &rarr;</a>
-    </header>
 
-      <hr>
-      </article>
     </script>
   </head>
   <body>
@@ -45,15 +40,7 @@
       <h1 id="main-title">The Portfolio of Carlo Santos</h1>
     </div>
 
-    <div class="projectsTemp">
-      <h1>Projects</h1>
-      <section id="work" class="currentProjects">
-      <img src="" class="Project-Picture">
-      <address><a href=""></a></address>
-      <article class="description"></article>
-      </section>
 
-    </div>
     <section id="projects">
 
     </section>
