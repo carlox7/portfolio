@@ -15,21 +15,21 @@ Project.prototype.toHtml = function() {
     return templateRender(this);
 };
 
-Projects.loadAll = function(rawData) {
+Project.loadAll = function(rawData) {
 carloProjects.forEach(function(projectItem) {
   Projects.all.push(new Project(projectItem));
 })
 };
 
-Projects.fetchAll = function() {
+Project.fetchAll = function() {
   if (localStorage.rawData) {
-    Projects.loadAll(JSON.parse(localStorage.rawData));
+    Project.loadAll(JSON.parse(localStorage.rawData));
     projectView.initiateIndexPage();
   } else {
-    $.getJSON('scripts/projects.json')
+    $.getJSON('data/projects.json')
     .then(function(data){
       localStorage.rawData = JSON.stringify(data);
-      Projects.loadAll(data);
+      Project.loadAll(data);
       console.log(Projects.all);
       projectView.initiateIndexPage();
     }, function(err){
