@@ -30,7 +30,7 @@ Project.fetchAll = function() {
     .then(function(data){
       localStorage.rawData = JSON.stringify(data);
       Project.loadAll(data);
-      console.log(Projects.all);
+      console.log(Project.all);
       projectView.initiateIndexPage();
     }, function(err){
       console.error(err);
