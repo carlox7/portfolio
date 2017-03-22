@@ -7,7 +7,7 @@ function Project (proj){
   this.url = proj.url,
   this.projectImage = proj.projectImage
 }
-Projects.all = [];
+Project.all = [];
 
 Project.prototype.toHtml = function() {
   var source = $('#project-template').html();
@@ -16,8 +16,8 @@ Project.prototype.toHtml = function() {
 };
 
 Project.loadAll = function(rawData) {
-carloProjects.forEach(function(projectItem) {
-  Projects.all.push(new Project(projectItem));
+  rawData.forEach(function(projectItem) {
+  Project.all.push(new Project(projectItem));
 })
 };
 
