@@ -26,14 +26,14 @@ Project.fetchAll = function() {
     Project.loadAll(JSON.parse(localStorage.rawData));
     projectView.initiateIndexPage();
   } else {
-    $.getJSON('data/projects.json')
-    .then(function(data){
+      $.getJSON('data/projects.json')
+      .then(function(data){
       localStorage.rawData = JSON.stringify(data);
       Project.loadAll(data);
       console.log(Project.all);
       projectView.initiateIndexPage();
     }, function(err){
-      console.error(err);
+        console.error(err);
     })
 
   }
