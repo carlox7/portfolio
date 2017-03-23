@@ -26,7 +26,3 @@ var carloProjects = [
     url:   'https://michaeltreat.github.io/Escape-code-201/',
 },
 ];
-
-$( ".icon-menu" ).click(function() {
-  $(this).show();
-});

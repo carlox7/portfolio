@@ -1,6 +1,5 @@
 'use strict';
 
-var myProjects = [];
 
 function Project (proj){
   this.name = proj.name,
@@ -8,6 +7,7 @@ function Project (proj){
   this.url = proj.url,
   this.projectImage = proj.projectImage
 }
+Project.all = [];
 
 Project.prototype.toHtml = function() {
   var source = $('#project-template').html();
@@ -15,10 +15,26 @@ Project.prototype.toHtml = function() {
     return templateRender(this);
 };
 
-carloProjects.forEach(function(projectItem) {
-  myProjects.push(new Project(projectItem));
-});
+Project.loadAll = function(rawData) {
+  rawData.forEach(function(projectItem) {
+  Project.all.push(new Project(projectItem));
+})
+};
 
-myProjects.forEach(function(a){
-  $('#projects').append(a.toHtml());
-});
+Project.fetchAll = function() {
+  if (localStorage.rawData) {
+    Project.loadAll(JSON.parse(localStorage.rawData));
+    projectView.initiateIndexPage();
+  } else {
+    $.getJSON('data/projects.json')
+    .then(function(data){
+      localStorage.rawData = JSON.stringify(data);
+      Project.loadAll(data);
+      console.log(Project.all);
+      projectView.initiateIndexPage();
+    }, function(err){
+      console.error(err);
+    })
+
+  }
+}

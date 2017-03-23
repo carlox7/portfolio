@@ -8,6 +8,12 @@ projectView.handleMainNav = function () {
     x = $(this);
     $('#' + $(this).attr('data-content')).show();
   });
-};
+}
+
+projectView.initiateIndexPage = function() {
+  Project.all.forEach(function(a){
+    $('#projects').append(a.toHtml())
+  });
 
 projectView.handleMainNav();
+};
