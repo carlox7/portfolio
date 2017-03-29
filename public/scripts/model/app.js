@@ -15,9 +15,7 @@ Project.prototype.toHtml = function() {
 };
 
 Project.loadAll = function(rawData) {
-  rawData.forEach(function(projectItem) {
-    Project.all.push(new Project(projectItem));
-  })
+    Project.all = rawData.map(projectItem => new Project(projectItem));
 };
 
 Project.fetchAll = function() {
