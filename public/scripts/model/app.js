@@ -1,6 +1,5 @@
 'use strict';
 
-
 function Project (proj){
   this.name = proj.name,
   this.description = proj.description,
@@ -11,14 +10,14 @@ Project.all = [];
 
 Project.prototype.toHtml = function() {
   var source = $('#project-template').html();
-    var templateRender = Handlebars.compile(source);
-    return templateRender(this);
+  var templateRender = Handlebars.compile(source);
+  return templateRender(this);
 };
 
 Project.loadAll = function(rawData) {
   rawData.forEach(function(projectItem) {
-  Project.all.push(new Project(projectItem));
-})
+    Project.all.push(new Project(projectItem));
+  })
 };
 
 Project.fetchAll = function() {
