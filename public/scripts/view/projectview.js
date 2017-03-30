@@ -1,10 +1,11 @@
 'use strict';
+(function(module) {
+let projectView = {};
 
-var projectView = {};
-var x;
-
-projectView.initiateIndexPage = function() {
-  Project.all.forEach(function(a){
-    $('#projects').append(a.toHtml())
-  });
-};
+  projectView.initiateIndexPage = function() {
+    Project.all.forEach(function(a){
+      $('#projects').append(a.toHtml())
+    });
+  };
+  module.projectView = projectView;
+})(window);
