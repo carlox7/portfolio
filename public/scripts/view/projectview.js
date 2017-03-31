@@ -1,7 +1,7 @@
 'use strict';
 
-var projectView = {};
-var x;
+let projectView = {};
+//let x;
 
 projectView.initiateIndexPage = function() {
   Project.all.forEach(function(a){

@@ -10,9 +10,9 @@ function Project (proj){
 Project.all = [];
 
 Project.prototype.toHtml = function() {
-  var source = $('#project-template').html();
-    var templateRender = Handlebars.compile(source);
-    return templateRender(this);
+  let source = $('#project-template').html();
+  let templateRender = Handlebars.compile(source);
+  return templateRender(this);
 };
 
 Project.loadAll = function(rawData) {
