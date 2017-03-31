@@ -1,7 +1,7 @@
 'use strict';
 
 const express = require('express');
-const PORT = 4000;
+const PORT = process.env.PORT || 3000;
 const app = express();
 const requestProxy = require('express-request-proxy');
 app.use(express.static('./public'));
