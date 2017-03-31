@@ -1,5 +1,6 @@
 'use strict';
 
+
 function Project (proj){
   this.name = proj.name,
   this.description = proj.description,
@@ -15,13 +16,9 @@ Project.prototype.toHtml = function() {
 };
 
 Project.loadAll = function(rawData) {
-<<<<<<< HEAD
-    Project.all = rawData.map(projectItem => new Project(projectItem));
-=======
   rawData.forEach(function(projectItem) {
     Project.all.push(new Project(projectItem));
   })
->>>>>>> ac66520aa69f5e657da93d3a755e477f7d886e82
 };
 
 Project.fetchAll = function() {

@@ -3,7 +3,12 @@
 let projectView = {};
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 let projectView = {};
+=======
+let projectView = {};
+//let x;
+>>>>>>> ac66520aa69f5e657da93d3a755e477f7d886e82
 
 projectView.initiateIndexPage = function() {
   Project.all.forEach(function(a){
